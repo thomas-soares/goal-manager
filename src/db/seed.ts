@@ -10,4 +10,6 @@ async function seed() {
     })
 }
 
-seed()
+seed().finally(() => {
+    client.end()
+})
