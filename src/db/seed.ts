@@ -10,6 +10,10 @@ async function seed() {
     })
 }
 
+await db.insert(goalCompletions).values({
+    { goalId: result[0].id}
+})
+
 seed().finally(() => {
     client.end()
 })
