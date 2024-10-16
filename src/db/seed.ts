@@ -11,7 +11,8 @@ async function seed() {
 }
 
 await db.insert(goalCompletions).values({
-    { goalId: result[0].id}
+    { goalId: result[0].id, createdAt: new Date() },
+    { goalId: result[1].id, createdAt: new Date() },
 })
 
 seed().finally(() => {
