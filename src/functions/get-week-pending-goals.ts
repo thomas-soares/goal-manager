@@ -6,3 +6,7 @@ dayjs.extend(weekOfYear)
 export async function getWeekPendingGoals() {
     const firstDayOfWeek = dayjs().startOf('week')
 }
+
+return {
+    pendingGoals: 
+}
