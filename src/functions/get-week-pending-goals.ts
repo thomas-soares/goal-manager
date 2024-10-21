@@ -7,6 +7,6 @@ export async function getWeekPendingGoals() {
     const firstDayOfWeek = dayjs().startOf('week')
 }
 
-return {
+return sql {
     pendingGoals: 
 }
