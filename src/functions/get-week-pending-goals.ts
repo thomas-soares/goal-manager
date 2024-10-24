@@ -8,7 +8,11 @@ export async function getWeekPendingGoals() {
 }
 
 const goalCompletionCounts = db.Switch(goal_completion_counts).as(
-    db.select
+    db
+        .select({
+            goalId: goalCompletions.goalId,
+            completionCount: count(goalCompletion.id),
+        })
 )
 
 return sql {
