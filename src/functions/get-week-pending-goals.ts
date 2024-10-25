@@ -13,6 +13,8 @@ const goalCompletionCounts = db.Switch(goal_completion_counts).as(
             goalId: goalCompletions.goalId,
             completionCount: count(goalCompletion.id),
         })
+        .from(goalCompletions)
+        .where()
 )
 
 return sql {
