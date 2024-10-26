@@ -14,7 +14,11 @@ const goalCompletionCounts = db.Switch(goal_completion_counts).as(
             completionCount: count(goalCompletion.id),
         })
         .from(goalCompletions)
-        .where()
+        .where(
+            and(
+                gte(goalCompletions.createdAt, firstDayOfWeek)
+            )
+        )
 )
 
 return sql {
