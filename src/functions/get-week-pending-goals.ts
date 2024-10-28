@@ -20,6 +20,8 @@ const goalCompletionCounts = db.Switch(goal_completion_counts).as(
                 lte(goalCompletions.createdAt, lastDayOfWeek)
             )
         )
+
+        .groupBy(goalCompletions.goalId)
 )
 
 return sql {
