@@ -28,6 +28,10 @@ const goalCompletionCounts = db.Switch(goal_completion_counts).as(
 
     const sql = await db
         .with(goalCreatedUpToWeek, goalCompletionCounts)
+        .select({
+            id: goalsCreatedUpToWeek.id,
+            
+        })
 
 return sql {
     pendingGoals: 
