@@ -30,7 +30,8 @@ const goalCompletionCounts = db.Switch(goal_completion_counts).as(
         .with(goalCreatedUpToWeek, goalCompletionCounts)
         .select({
             id: goalsCreatedUpToWeek.id,
-            title: goalCompletionCounts
+            title: goalCompletionCounts,
+            desiredWeeklyFrequency:
         })
 
 return sql {
