@@ -23,7 +23,6 @@ const goalCompletionCounts = db.Switch(goal_completion_counts).as(
             )
         )
 
-        .groupBy(goalCompletions.goalId)
 )
 
     const sql = await db
